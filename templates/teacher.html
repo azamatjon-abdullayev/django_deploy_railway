@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2-</title>
+</head>
+<body>
+<h1>Oqituvchi qoshish sahifasiga hush kelibsiz</h1>
+
+<button><a href="index.html" >Asosiy sahifaga otish</a></button>
+<br><br>
+<form action="{% url 'uy' %}" method="post">
+    {% csrf_token %}
+    <strong>Ism :</strong>
+    <input type="text" name="11" placeholder="Ismni kiriting"><br><br>
+
+    <strong>Familiya :</strong>
+    <input type="text" name="22" placeholder="Familiyani kiritng "><br><br>
+
+    <strong>Ism :</strong>
+    <input type="number" name="33" placeholder="Yoshni kiriting"><br><br>
+    <button type="submit"  >Saqlash</button>
+
+
+</form>
+
+</body>
+</html>

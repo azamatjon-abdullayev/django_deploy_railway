@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+
+
+
+
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Asosiy</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+</head>
+<body>
+
+<button><a href="{% url 'adding' %}" >Add Teacher</a></button>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Ism</th>
+      <th scope="col">Familiya</th>
+      <th scope="col">Yosh</th>
+      <th scope="col">Delete</th>
+      <th scope="col">Update</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for t in talaba %}
+    <tr>
+      <th scope="row">{{t.id}}</th>
+      <td>{{t.ism}}</td>
+      <td>{{t.fam}}</td>
+      <td>{{t.yosh}}</td>
+      <td><a href="{% url 'delete' t.id %}" class="btn btn-danger">Delete</a></td>
+      <td><a href="{% url 'update1' t.id %}" class="btn btn-primary">Update</a></td>
+
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+
+</body>
+</html>

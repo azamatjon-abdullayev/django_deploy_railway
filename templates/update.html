@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2-</title>
+</head>
+<body>
+<h1>Oqituvchi qoshish sahifasiga hush kelibsiz</h1>
+
+<button><a href="index.html" >Asosiy sahifaga otish</a></button>
+<br><br>
+<form action="{% url 'uy' %}" method="post">
+    {% csrf_token %}
+    <strong>Ism :</strong>
+    <input type="text" name="11" value="{{student.ism}}" placeholder="Ismni kiriting"><br><br>
+
+    <strong>Familiya :</strong>
+    <input type="text" name="22" value="{{student.fam}}" placeholder="Familiyani kiritng "><br><br>
+
+    <strong>Ism :</strong>
+    <input type="number" name="33" value="{{student.yosh}}" placeholder="Yoshni kiriting"><br><br>
+    <button type="submit"  >Saqlash</button>
+
+
+    <input type="hidden" name="idd" value="{{student.id}}" >
+
+
+
+</form>
+
+</body>
+</html>
